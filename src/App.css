@@ -116,3 +116,14 @@ section{
 #product .signin{
   background-color: #29f700;
 }
+.radius{
+  border-radius: 30px;
+  border-color: white;
+  color: #2d00f7;
+  background-color: #29f700;
+}
+.radius:hover{
+  border-color: white;
+  color: #2d00f7;
+  background-color: #29f700;
+}
