@@ -57,7 +57,7 @@ section{
 #home p{
   color: white;
 }
-.signin{
+#home .signin{
   background-color: #29f700;
 }
 @media only screen and (max-width: 600px) {
@@ -112,4 +112,7 @@ section{
 .card:hover{
   box-shadow: 5px 5px 10px rgba(0,0,0,.3),
   inset -4px -4px 10px white;
+}
+#product .signin{
+  background-color: #29f700;
 }
