@@ -6,8 +6,8 @@ function Chat() {
     const [input, setInput] = useState('');
     const [messages, setMessages] = useState([]);
     var messages1;
-    const chatWithGPT3 = async (userInput) => {
-        const apiKey = "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"
+    const chatWithGPT3 = async () => {
+        const apiKey = process.env.REACT_APP_API_KEY;
         const apiEndpoint = 'https://api.openai.com/v1/chat/completions';
         const headers = {
             'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function Chat() {
         setMessages((prevMessages) => [...prevMessages, userMessage]);
         const aiMessage = { text: '...', user: false };
         setMessages((prevMessages) => [...prevMessages, aiMessage]);
-        const response = await chatWithGPT3(input);
+        const response = await chatWithGPT3();
         const newAiMessage = { text: response, user: false };
         setMessages((prevMessages) => [...prevMessages.slice(0, -1), newAiMessage]);
         setInput('');
